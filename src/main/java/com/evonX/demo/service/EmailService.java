@@ -1,4 +1,4 @@
-package com.evonX.demo.service;
+/*package com.evonX.demo.service;
 
 import com.evonX.demo.entity.Event;
 import com.evonX.demo.entity.User;
@@ -49,4 +49,4 @@ public class EmailService {
                 "Time: " + event.getEventTime() + "\n" +
                 (event.getMeetingLink() != null ? "Meeting Link: " + event.getMeetingLink() + "\n" : "");
     }
-}
+}*/

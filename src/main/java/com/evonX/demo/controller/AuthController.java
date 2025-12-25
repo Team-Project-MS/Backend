@@ -1,4 +1,4 @@
-package com.evonX.demo.controller;
+/*package com.evonX.demo.controller;
 
 import com.evonX.demo.dto.AuthResponse;
 import com.evonX.demo.dto.LoginDTO;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final AuthService authService;
+    //private final AuthService authService;
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterDTO dto) {
@@ -27,5 +27,4 @@ public class AuthController {
     public ResponseEntity<AuthResponse> login(@RequestBody LoginDTO dto) {
         return ResponseEntity.ok(authService.login(dto));
     }
-
-}
+} */

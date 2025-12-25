@@ -1,4 +1,4 @@
-package com.evonX.demo.dto;
+/*package com.evonX.demo.dto;
 
 import lombok.Data;
 
@@ -9,4 +9,4 @@ public class RegisterDTO {
     private String email;
     private String password;
     private String university;
-}
+} */

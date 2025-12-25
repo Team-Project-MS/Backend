@@ -1,4 +1,4 @@
-package com.evonX.demo.dto;
+/*package com.evonX.demo.dto;
 
 import lombok.Data;
 
@@ -6,4 +6,4 @@ import lombok.Data;
 public class LoginDTO {
     private String email;
     private String password;
-}
+} */

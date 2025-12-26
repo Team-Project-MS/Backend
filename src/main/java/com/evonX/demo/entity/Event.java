@@ -15,20 +15,26 @@ import java.time.LocalTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "Event")
 public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String title;
 
+    @Column(nullable = false)
     private String image;  // URL or path to image
 
+    @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
     private String category;
 
+    @Column(nullable = false)
     private String university;
 
     @Enumerated(EnumType.STRING)

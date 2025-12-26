@@ -24,8 +24,10 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String first_name;
 
+    @Column(nullable = false)
     private String last_name;
 
     @Column(unique = true, nullable = false)
@@ -34,6 +36,7 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
     private String university;
 
     @Enumerated(EnumType.STRING)

@@ -85,7 +85,10 @@ public class UserService {
         dto.setEmail(user.getEmail());
         dto.setUniversity(user.getUniversity());
         dto.setRole(user.getRole());
-        dto.setSubscribed(user.isSubscribed());
+
+        // FIXED LINE:
+        dto.setSubscribed(Boolean.TRUE.equals(user.getSubscribed()));
+
         dto.setCreatedAt(user.getCreatedAt());
         return dto;
     }

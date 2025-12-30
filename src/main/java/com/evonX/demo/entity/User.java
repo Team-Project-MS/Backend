@@ -43,7 +43,8 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private Role role;
 
-    private boolean subscribed;
+    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+    private Boolean subscribed = false;
 
     @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();

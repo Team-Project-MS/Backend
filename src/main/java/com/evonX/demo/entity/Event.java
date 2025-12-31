@@ -32,10 +32,16 @@ public class Event {
     private String description;
 
     @Column(nullable = false)
+    private String highlight;
+
+    @Column(nullable = false)
     private String category;
 
     @Column(nullable = false)
     private String university;
+
+    @Column(nullable = false)
+    private String organizer;
 
     @Enumerated(EnumType.STRING)
     private EventType eventType;

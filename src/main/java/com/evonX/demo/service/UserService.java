@@ -13,7 +13,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,6 +30,7 @@ public class UserService {
         User user = getCurrentUser();
         return convertToDTO(user);
     }
+
 
     public void subscribe() {
         User user = getCurrentUser();

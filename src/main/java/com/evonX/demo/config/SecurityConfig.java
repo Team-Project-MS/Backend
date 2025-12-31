@@ -63,7 +63,6 @@ public class SecurityConfig {
 
                         // Allow GET requests for events to everyone (even without token)
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/events/**").permitAll()
-
                         // All other requests (POST, PUT, DELETE) require authentication
                         // The @PreAuthorize in your Controller will then check for ADMIN/SUPER_ADMIN
                         .anyRequest().authenticated()

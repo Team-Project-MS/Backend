@@ -28,6 +28,8 @@ public class SuperAdminService {
         return userRepository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
+
+
     public List<UserDTO> getSubscribedUsers() {
         checkSuperAdmin();
         return userRepository.findBySubscribedTrue().stream().map(this::convertToDTO).collect(Collectors.toList());

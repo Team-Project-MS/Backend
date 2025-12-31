@@ -14,8 +14,10 @@ public class EventDTO {
     private String title;
     private String image;
     private String description;
+    private String highlight;
     private String category;
     private String university;
+    private String organizer;
     private EventType eventType;
     private LocalDate eventDate;
     private LocalTime eventTime;

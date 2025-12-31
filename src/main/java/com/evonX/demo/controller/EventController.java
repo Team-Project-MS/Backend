@@ -47,6 +47,12 @@ public class EventController {
         return ResponseEntity.ok(eventService.getAllEvents(pageable));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<EventDTO> getEventById(@PathVariable Long id) {
+        return ResponseEntity.ok(eventService.getEventById(id));
+    }
+
+
     @GetMapping("/category/{category}")
     public ResponseEntity<Page<EventDTO>> getEventsByCategory(
             @PathVariable String category,

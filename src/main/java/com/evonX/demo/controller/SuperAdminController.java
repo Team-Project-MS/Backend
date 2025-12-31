@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/super-admin")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('SUPER_AMIN')")
+//@PreAuthorize("hasRole('SUPER_AMIN')")
 public class SuperAdminController {
 
     private final SuperAdminService superAdminService;

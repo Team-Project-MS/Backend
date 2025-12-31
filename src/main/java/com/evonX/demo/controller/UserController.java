@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/user")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('SUPER_ADMIN')")
+//@PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('SUPER_ADMIN')")
 public class UserController {
 
     private final UserService userService;
@@ -22,6 +22,8 @@ public class UserController {
     public ResponseEntity<UserDTO> getProfile() {
         return ResponseEntity.ok(userService.getProfile());
     }
+
+
 
     @PostMapping("/subscribe")
     public ResponseEntity<String> subscribe() {

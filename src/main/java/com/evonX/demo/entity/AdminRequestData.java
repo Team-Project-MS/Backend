@@ -25,6 +25,9 @@ public class AdminRequestData {
     @Column(nullable = false)
     private String last_name;
 
+    @Column(nullable = false)
+    private String designation;
+
     @Column(unique = true, nullable = false)
     private String email;
 

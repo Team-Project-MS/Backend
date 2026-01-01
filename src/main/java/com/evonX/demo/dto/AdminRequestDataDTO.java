@@ -11,6 +11,7 @@ public class AdminRequestDataDTO {
     private Long id;
     private String first_name;
     private String last_name;
+    private String designation;
     private String email;
     private String university;
     private Integer phone_number;

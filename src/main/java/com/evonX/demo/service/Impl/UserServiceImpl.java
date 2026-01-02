@@ -1,4 +1,4 @@
-package com.evonX.demo.service;
+package com.evonX.demo.service.Impl;
 
 import com.evonX.demo.dto.EventDTO;
 import com.evonX.demo.dto.UserDTO;
@@ -13,14 +13,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserServiceImpl {
 
     private final UserRepository userRepository;
     private final EventRepository eventRepository;

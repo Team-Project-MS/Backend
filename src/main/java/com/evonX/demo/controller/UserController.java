@@ -2,10 +2,9 @@ package com.evonX.demo.controller;
 
 import com.evonX.demo.dto.EventDTO;
 import com.evonX.demo.dto.UserDTO;
-import com.evonX.demo.service.UserService;
+import com.evonX.demo.service.Impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,47 +15,47 @@ import java.util.List;
 //@PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('SUPER_ADMIN')")
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userServiceImpl;
 
     @GetMapping("/profile")
     public ResponseEntity<UserDTO> getProfile() {
-        return ResponseEntity.ok(userService.getProfile());
+        return ResponseEntity.ok(userServiceImpl.getProfile());
     }
 
 
 
     @PostMapping("/subscribe")
     public ResponseEntity<String> subscribe() {
-        userService.subscribe();
+        userServiceImpl.subscribe();
         return ResponseEntity.ok("Subscribed");
     }
 
     @PostMapping("/unsubscribe")
     public ResponseEntity<String> unsubscribe() {
-        userService.unsubscribe();
+        userServiceImpl.unsubscribe();
         return ResponseEntity.ok("Unsubscribed");
     }
 
     @PostMapping("/request-admin")
     public ResponseEntity<String> requestAdmin() {
-        userService.requestAdmin();
+        userServiceImpl.requestAdmin();
         return ResponseEntity.ok("Admin request submitted");
     }
 
     @GetMapping("/favorites")
     public ResponseEntity<List<EventDTO>> getFavorites() {
-        return ResponseEntity.ok(userService.getFavorites());
+        return ResponseEntity.ok(userServiceImpl.getFavorites());
     }
 
     @PostMapping("/favorites/{eventId}")
     public ResponseEntity<String> addToFavorites(@PathVariable Long eventId) {
-        userService.addToFavorites(eventId);
+        userServiceImpl.addToFavorites(eventId);
         return ResponseEntity.ok("Added to favorites");
     }
 
     @DeleteMapping("/favorites/{eventId}")
     public ResponseEntity<String> removeFromFavorites(@PathVariable Long eventId) {
-        userService.removeFromFavorites(eventId);
+        userServiceImpl.removeFromFavorites(eventId);
         return ResponseEntity.ok("Removed from favorites");
     }
 }

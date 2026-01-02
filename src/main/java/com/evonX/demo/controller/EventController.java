@@ -1,7 +1,7 @@
 package com.evonX.demo.controller;
 
 import com.evonX.demo.dto.EventDTO;
-import com.evonX.demo.service.EventService;
+import com.evonX.demo.service.Impl.EventServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -9,7 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class EventController {
 
-    private final EventService eventService;
+    private final EventServiceImpl eventService;
 
     // Fixed: Uses hasAnyRole and returns 201 Created status
     @PostMapping

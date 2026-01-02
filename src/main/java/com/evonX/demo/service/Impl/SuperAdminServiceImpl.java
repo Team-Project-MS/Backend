@@ -1,4 +1,4 @@
-package com.evonX.demo.service;
+package com.evonX.demo.service.Impl;
 
 import com.evonX.demo.dto.AdminRequestDTO;
 import com.evonX.demo.dto.UserDTO;
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class SuperAdminService {
+public class SuperAdminServiceImpl {
 
     private final UserRepository userRepository;
     private final AdminRequestRepository adminRequestRepository;

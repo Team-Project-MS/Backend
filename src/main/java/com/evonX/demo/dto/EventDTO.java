@@ -22,6 +22,7 @@ public class EventDTO {
     private LocalDate eventDate;
     private LocalTime eventTime;
     private String meetingLink;
+    private String fee;
     private Long createdById;
     private LocalDateTime createdAt;
 

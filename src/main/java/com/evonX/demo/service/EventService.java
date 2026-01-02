@@ -137,6 +137,7 @@ public class EventService {
                 .eventDate(dto.getEventDate())
                 .eventTime(dto.getEventTime())
                 .meetingLink(dto.getMeetingLink())
+                .fee(dto.getFee())
                 .build();
     }
 
@@ -152,6 +153,7 @@ public class EventService {
         event.setEventDate(dto.getEventDate());
         event.setEventTime(dto.getEventTime());
         event.setMeetingLink(dto.getMeetingLink());
+        event.setFee(dto.getFee());
     }
 
     private EventDTO convertToDTO(Event event) {
@@ -168,6 +170,7 @@ public class EventService {
         dto.setEventDate(event.getEventDate());
         dto.setEventTime(event.getEventTime());
         dto.setMeetingLink(event.getMeetingLink());
+        dto.setFee(event.getFee());
         dto.setCreatedById(event.getCreatedBy().getId());
         dto.setCreatedAt(event.getCreatedAt());
         return dto;

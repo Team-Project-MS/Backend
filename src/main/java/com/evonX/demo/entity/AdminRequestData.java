@@ -32,6 +32,9 @@ public class AdminRequestData {
     private String email;
 
     @Column(nullable = false)
+    private String nic;
+
+    @Column(nullable = false)
     private String university;
 
     @Column(nullable = false)

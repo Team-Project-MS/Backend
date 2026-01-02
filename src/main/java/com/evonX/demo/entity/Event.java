@@ -46,11 +46,16 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventType eventType;
 
+    @Column(nullable = false)
     private LocalDate eventDate;
 
+    @Column(nullable = false)
     private LocalTime eventTime;
 
     private String meetingLink;
+
+    @Column(nullable = false)
+    private String fee;
 
     @ManyToOne
     @JoinColumn(name = "created_by")

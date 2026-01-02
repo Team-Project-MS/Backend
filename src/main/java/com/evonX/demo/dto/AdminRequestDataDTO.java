@@ -13,6 +13,7 @@ public class AdminRequestDataDTO {
     private String last_name;
     private String designation;
     private String email;
+    private String  nic;
     private String university;
     private Integer phone_number;
     private String uniletterlink;
